@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.app-screen{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+video{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;
+}
+
+.time-control,
+.player,
+.music-control{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    flex: 1;
+}
+/*CSS for the time controls and buttons*/
+
+.time-control>button{
+    padding: 1vw;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+.time-control>button:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    box-shadow: 2px 2px 20px;
+}
+
+/*CSS for the player app*/
+.player{
+    position: relative; 
+}
+
+.player svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+}
+
+.time-show{
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    font-size: xx-large;
+}
+
+
+/*CSS for the music controls and buttons*/
+
+.music-control>button{
+    width: 7vw;
+    height: 7vw;
+    padding: 1vw;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.music-control>button>img{
+    width: 100%;
+}
+.music-control>button:nth-child(1){
+    background-color: orange;
+}
+.music-control>button:nth-child(2){
+    background-color: lightskyblue;
+}
