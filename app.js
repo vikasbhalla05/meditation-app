@@ -23,6 +23,11 @@ const app = () => {
     // change sounds
     sounds.forEach(sound =>{
         sound.addEventListener('click', function() {
+            // this.classList.add(".pressedMood");
+            this.classList.add("pressedMood");
+            setTimeout(function(){
+                this.classList.remove("pressedMood");
+            },1000);
             songs.src = this.getAttribute("data-sound");
             video.src = this.getAttribute("data-video");
             checkPlayedSong(songs);
